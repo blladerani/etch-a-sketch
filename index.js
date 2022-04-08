@@ -35,16 +35,17 @@ function createGrid() {
 }
 
 function handleCell(e) {
-  console.log(color)
-  if (!eraseMod) {
-    if (e.buttons == 1 || e.buttons == 3) {
-      e.currentTarget.style.backgroundColor = color
-    } 
-  } else {
-    e.currentTarget.style.backgroundColor = "#DBDBDB"
-  }
   
-}
+  
+    if (e.buttons == 1 || e.buttons == 3) {
+      if (!eraseMod) {
+        e.currentTarget.style.backgroundColor = color;
+        return
+      }
+      e.currentTarget.style.backgroundColor = "#DBDBDB"
+    } 
+  } 
+
 
 
 
